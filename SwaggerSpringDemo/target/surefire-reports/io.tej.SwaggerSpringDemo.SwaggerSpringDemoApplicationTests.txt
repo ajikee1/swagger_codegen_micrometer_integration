@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.tej.SwaggerSpringDemo.SwaggerSpringDemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.6 s - in io.tej.SwaggerSpringDemo.SwaggerSpringDemoApplicationTests

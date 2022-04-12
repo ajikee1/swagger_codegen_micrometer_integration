@@ -1,0 +1,52 @@
+swagger: "2.0"
+info:
+  description: "Swagger Micrometer API. Exposes the APIs required to pass in parameters to configure Micrometer metrics"
+  version: "1.0.0"
+  title: "Micrometer REST"
+tags:
+  - name: "Micrometer Counters"
+    description: ""
+schemes:
+  - "http"
+paths:
+  /counter:
+    post:
+      summary: "Add a new counter to the Springboot App"
+      description: ""
+      operationId: "addCounter"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Counter object that needs to registered with the springboot app"
+          required: true
+          schema:
+            $ref: "#/definitions/Count"
+      responses:
+        "405":
+          description: "Invalid input"
+        "200":
+          description: "Success"
+definitions:
+  Count:
+    type: "object"
+    required:
+      - "name"
+      - "baseUnit"
+      - "description"
+      - "tags"
+    properties:
+      name:
+        type: "string"
+      baseUnit:
+        type: "string"
+      description:
+        type: "string"
+      tags:
+        type: array
+        items:
+          type: string
+        
